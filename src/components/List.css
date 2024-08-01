@@ -1,7 +1,7 @@
 .List{
     display: flex;
     flex-direction:column;
-    gap: 20px;
+    gap: 0px;
 }
 
 
@@ -19,9 +19,15 @@
 
 
 
-
 .List .todos_wrapper{
     display: flex;
     flex-direction: column;
     gap: 20px
+}
+
+
+.List .Filter-list{
+    display: flex;
+  justify-content: space-between; /* 제목과 필터를 좌우로 떨어뜨림 */
+  align-items: center; /* 수직 중앙 정렬 */
 }

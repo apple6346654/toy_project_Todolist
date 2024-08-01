@@ -2,8 +2,10 @@ import React from 'react'
 import './List.css'
 import TodoItem from './TodoItem'
 import { useState } from 'react'
+import Filter from './Filter'
 
-  const List = ({ todos ,onUpdate, onDelete}) => {
+
+  const List = ({ todos ,onUpdate, onDelete, setFilter,filter}) => {
   const [search, setSearch] = useState("");
 
   const onChangeSearch = (e) => {
@@ -19,11 +21,16 @@ import { useState } from 'react'
    )
   }
 
-  const filteredTodos = getFilteredData()  //다시해;;;
+  const filteredTodos = getFilteredData()  
 
   return (
     <div className="List">
-    <h4>Todo List🌎</h4>
+    
+    <div className='Filter-list'>
+    <h4 style={{display:'inline-block'}}>Todo List🌎</h4>
+    <Filter  filter={filter} setFilter={setFilter} />
+    </div>
+
     <input value={search} 
     onChange={onChangeSearch} 
     placeholder='검색어를 입력하세요.'

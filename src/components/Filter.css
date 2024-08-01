@@ -1,0 +1,12 @@
+.Filter {
+    display: inline-block;
+      
+}
+  
+  .Filter label {
+    margin-right: 10px;
+  }
+  
+  .Filter select {
+    padding: 5px;
+  }
